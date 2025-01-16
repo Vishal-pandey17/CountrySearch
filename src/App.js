@@ -7,7 +7,7 @@ function CountryCards({name, flag}) {
       className={styles.countryCard}
     >
        <img src={flag} style={{height: "110px", width: "110px"}} alt={`Flag of ${name}`}/>
-       <h3>{name}</h3>
+       <h2>{name}</h2>
     </div>
   );
 }
@@ -38,7 +38,10 @@ function CountrySearch(){
         }
         fetchCountry();
      }, []);
-
+    
+     useEffect(() => {
+       console.log(filteredData);
+     }, [filteredData]);
 
      // Debouncing concept for search
      useEffect(() => {
@@ -46,7 +49,9 @@ function CountrySearch(){
          const filtered = countries.filter((country) => 
           country.common.toLowerCase().includes(searchFlag.toLowerCase())
          );
+
          setFilteredData(filtered);
+         
        }, 500);
 
        return () => clearTimeout(handler);
