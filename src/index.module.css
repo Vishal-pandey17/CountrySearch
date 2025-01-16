@@ -1,0 +1,30 @@
+.countryCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 200px;
+    width: 200px;
+  }
+
+  .countryGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+
+  .searchBar {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%; 
+    max-width: 400px;
+    margin: 20px auto;
+    margin-left: 30%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
